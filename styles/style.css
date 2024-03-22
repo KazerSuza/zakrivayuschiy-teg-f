@@ -18,7 +18,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font);
-  font-weight: var(--font-weight-regular);
+  font-variation-settings: 'wght' var(--font-weight-regular);
   color: var(--text-color);
   background-color: var(--background-color);
   background-image: var(--background-image);
@@ -138,6 +138,7 @@
   font-size: 18px;
   padding: 6px 10px 2px;
   line-height: 1.24;
+  font-variation-settings: 'wght' var(--font-weight-bold);
 }
 
 .article__container {
@@ -155,7 +156,11 @@
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 14px;
-  -webkit-text-stroke: 1px var(--label-stroke-color);
+  text-shadow:
+    -1px 0 var(--label-stroke-color), 
+    0 1px var(--label-stroke-color), 
+    1px 0 var(--label-stroke-color), 
+    0 -1px var(--label-stroke-color);
   mix-blend-mode: hard-light;
 }
 
@@ -168,7 +173,11 @@
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 14px;
-  -webkit-text-stroke: 1px var(--label-stroke-color);
+  text-shadow:
+    -1px 0 var(--label-stroke-color), 
+    0 1px var(--label-stroke-color), 
+    1px 0 var(--label-stroke-color), 
+    0 -1px var(--label-stroke-color);
   mix-blend-mode: hard-light;
 }
 
@@ -181,7 +190,11 @@
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 14px;
-  -webkit-text-stroke: 1px var(--label-stroke-color);
+  text-shadow:
+    -1px 0 var(--label-stroke-color), 
+    0 1px var(--label-stroke-color), 
+    1px 0 var(--label-stroke-color), 
+    0 -1px var(--label-stroke-color);
   mix-blend-mode: hard-light;
 }
 
@@ -194,7 +207,11 @@
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 14px;
-  -webkit-text-stroke: 1px var(--label-stroke-color);
+  text-shadow:
+    -1px 0 var(--label-stroke-color), 
+    0 1px var(--label-stroke-color), 
+    1px 0 var(--label-stroke-color), 
+    0 -1px var(--label-stroke-color);
   mix-blend-mode: hard-light;
 }
 
@@ -207,7 +224,11 @@
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 14px;
-  -webkit-text-stroke: 1px var(--label-stroke-color);
+  text-shadow:
+    -1px 0 var(--label-stroke-color), 
+    0 1px var(--label-stroke-color), 
+    1px 0 var(--label-stroke-color), 
+    0 -1px var(--label-stroke-color);
   mix-blend-mode: hard-light;
 }
 
@@ -220,7 +241,11 @@
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 14px;
-  -webkit-text-stroke: 1px var(--label-stroke-color);
+  text-shadow:
+  -1px 0 var(--label-stroke-color), 
+  0 1px var(--label-stroke-color), 
+  1px 0 var(--label-stroke-color), 
+  0 -1px var(--label-stroke-color);
   mix-blend-mode: hard-light;
 }
 
@@ -233,8 +258,57 @@
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 14px;
-  -webkit-text-stroke: 1px var(--label-stroke-color);
+  text-shadow:
+  -1px 0 var(--label-stroke-color), 
+  0 1px var(--label-stroke-color), 
+  1px 0 var(--label-stroke-color), 
+  0 -1px var(--label-stroke-color);
   mix-blend-mode: hard-light;
+}
+
+@supports((text-stroke: 1px var(--label-stroke-color)) or (-webkit-text-stroke: 1px var(--label-stroke-color))) {  
+  
+  .html::after {
+      -webkit-text-stroke: 1px var(--label-stroke-color);
+      text-stroke: 1px var(--label-stroke-color);
+      text-shadow: none;
+  }
+
+  .css::after {
+    -webkit-text-stroke: 1px var(--label-stroke-color);
+    text-stroke: 1px var(--label-stroke-color);
+    text-shadow: none;
+}
+
+  .desigions::after {
+    -webkit-text-stroke: 1px var(--label-stroke-color);
+    text-stroke: 1px var(--label-stroke-color);
+    text-shadow: none;
+}
+
+  .care::after {
+    -webkit-text-stroke: 1px var(--label-stroke-color);
+    text-stroke: 1px var(--label-stroke-color);
+    text-shadow: none;
+}
+
+  .support::after {
+    -webkit-text-stroke: 1px var(--label-stroke-color);
+    text-stroke: 1px var(--label-stroke-color);
+    text-shadow: none;
+}
+
+  .lifestyle::after {
+    -webkit-text-stroke: 1px var(--label-stroke-color);
+    text-stroke: 1px var(--label-stroke-color);
+    text-shadow: none;
+}
+
+  .experience::after {
+    -webkit-text-stroke: 1px var(--label-stroke-color);
+    text-stroke: 1px var(--label-stroke-color);
+    text-shadow: none;
+}
 }
 
 .article__image {
@@ -274,7 +348,6 @@
   line-height: 1.17;
   padding: 21px 25px 25px;
   font-size: 18px;
-  font-variation-settings: 'wgth' 400;
 }
 
 .article__text p:not(:last-of-type) {
@@ -338,7 +411,7 @@
   transition: .3s .08s;
 }
 
-.like-icon.is-liked .core{
+.like-icon.is-liked .core {
   fill: var(--sparks-color);
   transition: .3s .03s;
 }
