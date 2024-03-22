@@ -4,3 +4,29 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-light {
+  --background-color: #fff;
+  --text-color: #000;
+  --label-color: rgb(0 0 0 / 0.5);
+  --label-stroke-color: rgb(255 255 255 /0.5);
+  --background-image: repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+  repeating-linear-gradient( #d3d3d3 0 2px, transparent 2px 4px),
+  linear-gradient(#e7e7e7, #1a1a1a);
+  --button-color: #fff;
+}
+
+
+@media (prefers-color-scheme: light) {
+
+  :root.theme-auto {
+    --background-color: #fff;
+    --text-color: #000;
+    --label-color: rgb(0 0 0 / 0.5);
+    --label-stroke-color: rgb(255 255 255 /0.5);
+    --background-image: repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient( #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7, #1a1a1a);
+    --button-color: #fff;
+  }
+}
