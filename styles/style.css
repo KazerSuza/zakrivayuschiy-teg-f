@@ -65,7 +65,7 @@
   background-color: transparent;
   border: transparent;
   font-size: inherit;
-  font-weight: inherit; 
+  font-weight: inherit;
   text-transform: inherit;
   transition: 0.3s ease;
 }
@@ -103,7 +103,7 @@
   height: 2px;
   background-color: currentColor;
   transition: 0.3s ease;
-  transform: scaleX(0); 
+  transform: scaleX(0);
   transform-origin: left;
 }
 
@@ -155,7 +155,7 @@
   z-index: 1;
 }
 
-@supports((text-stroke: 1px var(--label-stroke-color)) or (-webkit-text-stroke: 1px var(--label-stroke-color))) {  
+@supports((text-stroke: 1px var(--label-stroke-color)) or (-webkit-text-stroke: 1px var(--label-stroke-color))) {
   
   .article__container-label {
     -webkit-text-stroke: 1px var(--label-stroke-color);
@@ -258,8 +258,8 @@
   block-size: 100%;
   background-color: var(--text-color);
   transition: .5s ease-in-out;
-  transform: scaleX(0); 
-  transform-origin: left; 
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
 .button:focus {
@@ -268,7 +268,6 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 var(--text-color);
-  transition: 0.3s ease;
 }
 
 .button:hover:after {
